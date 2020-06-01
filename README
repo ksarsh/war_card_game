@@ -1,16 +1,15 @@
 The game is based on http://www.bicyclecards.com/how-to-play/war/
 
-Usage:
-------
+#Usage:
 python myWarGame.py <User Name>
 Eg: python myWarGame.py Batman
 
-Environment:
-------------
+#Environment:
+
 Coded and tested with Python 3.4.2
 
-Assumptions & Observations:
----------------------------
+#Assumptions & Observations:
+
 1. It is assumed, in a 'War' scenario if a player has only One card (Last Card) or no cards
 to play, the opponent is the winner
 
@@ -35,8 +34,8 @@ directions. This may be a reason why we see both finite & infinite states in the
 
 Reference: Evgeny Lakshtanov, Vera Roshchina, On Finiteness in the Card Game of War
 
-Game rules:
------------
+#Game rules:
+
 1. Game is player among 2 players with equal distribution of the game card deck (52 cards)
 2. Its a game of chance and there is no trick involved. Cards coming out of deck are random
 3. Each player plays a card face down and the player with highest card value takes both the cards 
@@ -45,18 +44,18 @@ Game rules:
 6. If the cards with face up turn out to be of same value, its 'War' again
 7. Winner - The player with all cards
 
-Project requirement:
---------------------
+#Project requirement:
+
 1. The above rules be met
 2. Since the game should be played by one of us, the other player would be the computer
 3. Since the game is of chance, the cards are picked randomly for both User & Computer
 
-Game input:
------------
+#Game input:
+
 1. User name
 
-Game output:
-------------
+#Game output:
+
 1. Number of game rounds played
 2. Number of war-round
 3. Winner announcement
