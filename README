@@ -1,0 +1,62 @@
+The game is based on http://www.bicyclecards.com/how-to-play/war/
+
+Usage:
+------
+python myWarGame.py <User Name>
+Eg: python myWarGame.py Batman
+
+Environment:
+------------
+Coded and tested with Python 3.4.2
+
+Assumptions & Observations:
+---------------------------
+1. It is assumed, in a 'War' scenario if a player has only One card (Last Card) or no cards
+to play, the opponent is the winner
+
+2. It is observed, since 'War' is a game of chance, there is probability of infinite rounds
+between the players so the number of rounds is restricted to 10,000. If the number of rounds
+reach 10,000 the player with higher number of cards wins
+
+3.  My observations: since the is designed with,
+        i. Fixed/Rigid rules
+        ii. No shuffling after the game starts
+        iii. The order of placing the winning card to bottom is fixed
+It is possible to have situations that never ends the game. This is a reason for infinite states
+
+4. My observation & reading: The game follows Markov chain theory which states that with an initial state, 
+the mathematical expectation of the number of moves before absorption (reaching the final state) 
+is finite if and only if the final state can be reached from any state. The graph of our game is 
+absorbing if and only if for every state (division of cards into 2 deck) it is possible to finish 
+the game in finite moves. This is if the game changes into a Absorbing graph. 
+
+Infinite states are possible when the game changes to an Non-absorbing graph. So the game can take both 
+directions. This may be a reason why we see both finite & infinite states in the output.
+
+Reference: Evgeny Lakshtanov, Vera Roshchina, On Finiteness in the Card Game of War
+
+Game rules:
+-----------
+1. Game is player among 2 players with equal distribution of the game card deck (52 cards)
+2. Its a game of chance and there is no trick involved. Cards coming out of deck are random
+3. Each player plays a card face down and the player with highest card value takes both the cards 
+4. If both players play cards of same value, It is a 'War'
+5. In 'War' scenario, each player turns down 1 card face down and 1 card face open. The player with higher card value takes all 6 cards
+6. If the cards with face up turn out to be of same value, its 'War' again
+7. Winner - The player with all cards
+
+Project requirement:
+--------------------
+1. The above rules be met
+2. Since the game should be played by one of us, the other player would be the computer
+3. Since the game is of chance, the cards are picked randomly for both User & Computer
+
+Game input:
+-----------
+1. User name
+
+Game output:
+------------
+1. Number of game rounds played
+2. Number of war-round
+3. Winner announcement
